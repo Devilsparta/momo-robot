@@ -1,0 +1,85 @@
+--- /dev/null
++++ b/server/internal/web_socket/frame_bounds_test.go
+@@ -0,0 +1,24 @@
++package web_socket
++
++import (
++	"context"
++	"testing"
++)
++
++func TestParseBinaryMessageBounds(t *testing.T) {
++	cases := [][]byte{
++		{}, {0x10}, {0x10, 0, 0, 0, 1},
++		{0x10, 0xff, 0xff, 0xff, 0xff},
++		{0x10, 0, 0, 0, 0, 1},
++	}
++	for _, frame := range cases {
++		if _, _, _, ok := parseBinaryMessage(context.Background(), &frame); ok {
++			t.Fatalf("accepted malformed frame %x", frame)
++		}
++	}
++	frame := []byte{0x10, 0, 0, 0, 0}
++	kind, length, payload, ok := parseBinaryMessage(context.Background(), &frame)
++	if !ok || kind != 0x10 || length != 0 || len(payload) != 0 {
++		t.Fatal("valid ping rejected")
++	}
++}
+--- /dev/null
++++ b/server/internal/web_socket/frame_codec.go
+@@ -0,0 +1,27 @@
++// SPDX-License-Identifier: MIT
++package web_socket
++
++import (
++	"context"
++	"encoding/binary"
++	"github.com/gogf/gf/v2/frame/g"
++)
++
++// Parse custom binary protocol messages, return message type, data length, payload and success status
++func parseBinaryMessage(ctx context.Context, msg *[]byte) (byte, int, []byte, bool) {
++	if msg == nil || len(*msg) < 1+4 {
++		g.Log().Warning(ctx, "Message too short, cannot parse header, message not forwarded")
++		return 0, 0, nil, false
++	}
++
++	msgType := (*msg)[0]
++	declaredLen := binary.BigEndian.Uint32((*msg)[1:5])
++	dataLen := len(*msg) - 5
++	if uint64(dataLen) != uint64(declaredLen) {
++		g.Log().Warningf(ctx, "Length mismatch: header says %d, actual is %d, message not forwarded", declaredLen, dataLen)
++		return 0, 0, nil, false
++	}
++
++	payload := (*msg)[5:]
++	return msgType, dataLen, payload, true
++}
+--- a/server/internal/web_socket/web_socket.go
++++ b/server/internal/web_socket/web_socket.go
+@@ -304,25 +304,6 @@
+ 	return nil
+ }
+ 
+-// Parse custom binary protocol messages, return message type, data length, payload and success status
+-func parseBinaryMessage(ctx context.Context, msg *[]byte) (byte, int, []byte, bool) {
+-	if len(*msg) < 1+4 {
+-		logger.Warning(ctx, "Message too short, cannot parse header, message not forwarded")
+-		return 0, 0, nil, false
+-	}
+-
+-	msgType := (*msg)[0]
+-	dataLen := int(binary.BigEndian.Uint32((*msg)[1:5]))
+-	payload := (*msg)[5 : 5+dataLen]
+-
+-	if len(*msg)-5 != dataLen {
+-		logger.Warningf(ctx, "Length mismatch: header says %d, actual is %d, message not forwarded", dataLen, len(*msg)-5)
+-		return 0, 0, nil, false
+-	}
+-
+-	return msgType, dataLen, payload, true
+-}
+-
+ // Handle WebSocket messages from StackChan devices
+ func readStackChanMessage(ctx context.Context, client *model.StackChanClient, messageType *int, msg *[]byte) {
+ 	if *messageType == websocket.BinaryMessage {

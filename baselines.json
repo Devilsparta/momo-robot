@@ -1,0 +1,60 @@
+{
+  "snapshot_kind": "reviewed-source-overlays-and-patches-not-full-checkout",
+  "repositories": [
+    {
+      "name": "StackChan",
+      "repo": "m5stack/StackChan",
+      "commit": "f901cc2969189f3f0e96af1442c0f96e77e1e2c1"
+    },
+    {
+      "name": "xiaozhi-esp32",
+      "repo": "78/xiaozhi-esp32",
+      "commit": "e77dedb1309153bb63fed285772962c920c97dd4"
+    }
+  ],
+  "firmware_git_dependencies": [
+    {
+      "url": "https://github.com/Forairaaaaa/mooncake.git",
+      "path": "components/mooncake",
+      "branch": "v2.3.3",
+      "repo": "Forairaaaaa/mooncake",
+      "sha": "572a7e488641f1c3f22e85d65c27f095ecf27d12"
+    },
+    {
+      "url": "https://github.com/Forairaaaaa/mooncake_log.git",
+      "path": "components/mooncake_log",
+      "branch": "v1.5.0",
+      "repo": "Forairaaaaa/mooncake_log",
+      "sha": "554d55cd8c6e551b911b99cad274a46929f05bae"
+    },
+    {
+      "url": "https://github.com/Forairaaaaa/smooth_ui_toolkit.git",
+      "path": "components/smooth_ui_toolkit",
+      "branch": "v2.12.0",
+      "repo": "Forairaaaaa/smooth_ui_toolkit",
+      "sha": "2a18ff5d3fd6b402339d0f4f3c2834f574e3cb05"
+    },
+    {
+      "url": "https://github.com/78/xiaozhi-esp32.git",
+      "path": "xiaozhi-esp32",
+      "branch": "v2.2.4",
+      "patch": "patches/xiaozhi-esp32.patch",
+      "repo": "78/xiaozhi-esp32",
+      "sha": "e77dedb1309153bb63fed285772962c920c97dd4"
+    },
+    {
+      "url": "https://github.com/bblanchon/ArduinoJson.git",
+      "path": "components/ArduinoJson",
+      "branch": "v7.4.2",
+      "repo": "bblanchon/ArduinoJson",
+      "sha": "733bc4ee82630c88c0a619a883cd3a206efae977"
+    },
+    {
+      "url": "https://github.com/espressif/esp-now.git",
+      "path": "components/esp-now",
+      "branch": "c33383de97f3ed2fc52117f5ef04f71990432e5d",
+      "repo": "espressif/esp-now",
+      "sha": "c33383de97f3ed2fc52117f5ef04f71990432e5d"
+    }
+  ]
+}

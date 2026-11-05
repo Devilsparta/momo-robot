@@ -1,0 +1,15 @@
+{
+  "archives": [
+    {
+      "archive": "StackChan-baseline.zip",
+      "bytes": 27103412,
+      "sha256": "a34105a687b30795612605cc18b31fb147a22fdcee10ecf00f668d16a681e8aa"
+    },
+    {
+      "archive": "esp-idf-v5.5.4.zip",
+      "bytes": 72803160,
+      "sha256": "de612266e2f3f5fc3ba9ae9dd824edbd4d1085a939d5b2a19b1c16564e5f7dcb"
+    }
+  ],
+  "idf_source_tree": "735507283d5b2f9fb363a1901172dbd9e847945d"
+}

@@ -1,0 +1,15 @@
+{
+  "package": "opus_codec_windows 3.0.5",
+  "upstream_package_url": "https://pub.dev/packages/opus_codec_windows/versions/3.0.5",
+  "library_bytes": 2273640,
+  "library_sha256": "3ebc210ae7e48a63f8a9df6448f983515a9a9bea04aa0020cac18fead93eb17a",
+  "runtime_version": "libopus 1.5.2",
+  "abi_source": "opus_codec_ios 3.0.5 bundled opus.framework Headers/opus.h",
+  "license_copy": "provenance/opus-license.txt",
+  "ffmpeg": "existing FFmpeg 8.1.1-full_build-www.gyan.dev; libavcodec 62.28.101; libopus decoder; one thread",
+  "redistributed_binaries": false,
+  "test_audio": "generated 440/880 Hz waves and silence; no recording or media files",
+  "external_services": false,
+  "hardware": false,
+  "source": "External local test dependency; not bundled"
+}

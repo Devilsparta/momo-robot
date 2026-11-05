@@ -1,0 +1,26 @@
+{
+  "notice": "Synthetic offline vectors only; no live identity/audio or device operations.",
+  "remote_ping_hex": "1000000000",
+  "lan_ping_hex": "5343011000000000000000000001000000010000",
+  "voice_client_hello": {
+    "type": "hello",
+    "version": 1,
+    "transport": "websocket",
+    "features": {
+      "mcp": true
+    },
+    "audio_params": {
+      "format": "opus",
+      "sample_rate": 16000,
+      "channels": 1,
+      "frame_duration": 60
+    }
+  },
+  "ble_set_wifi": {
+    "cmd": "setWifi",
+    "data": {
+      "ssid": "PLACEHOLDER_SSID",
+      "password": "PLACEHOLDER_PASSWORD"
+    }
+  }
+}

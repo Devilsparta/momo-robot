@@ -1,0 +1,7 @@
+# Private server origin; endpoint support already exists upstream.
+CONFIG_STACKCHAN_SERVER_URL="https://management.example.invalid"
+CONFIG_OTA_URL="https://management.example.invalid/xiaozhi/ota/"
+# Private OTA and diagnostics derive the management origin; this legacy setting is not used in private mode.
+# Apply the private-mode patches first; old NVS is preserved but ignored.
+CONFIG_STACKCHAN_PRIVATE_BACKEND=y
+# No partition changes. No flash/NVS/eFuse operations are included.

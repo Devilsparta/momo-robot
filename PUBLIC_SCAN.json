@@ -1,0 +1,87 @@
+{
+  "scope": "all candidate UTF-8 payload files; generated manifest/checksums are validated separately",
+  "findings": [
+    {
+      "path": "implementation/app/test/private_endpoints_test.dart",
+      "line": 16,
+      "category": "url_userinfo",
+      "disposition": "synthetic rejected credential-bearing URL in security regression test"
+    },
+    {
+      "path": "implementation/app/test/private_endpoints_test.dart",
+      "line": 16,
+      "category": "email",
+      "disposition": "synthetic rejected credential-bearing URL in security regression test"
+    },
+    {
+      "path": "implementation/app-private-endpoints.patch",
+      "line": 380,
+      "category": "private_ip",
+      "disposition": "verified upstream example or removed baseline sample; not private network data"
+    },
+    {
+      "path": "implementation/app-private-endpoints.patch",
+      "line": 386,
+      "category": "private_ip",
+      "disposition": "verified upstream example or removed baseline sample; not private network data"
+    },
+    {
+      "path": "implementation/app-private-endpoints.patch",
+      "line": 3781,
+      "category": "url_userinfo",
+      "disposition": "synthetic rejected credential-bearing URL in security regression test"
+    },
+    {
+      "path": "implementation/app-private-endpoints.patch",
+      "line": 3781,
+      "category": "email",
+      "disposition": "synthetic rejected credential-bearing URL in security regression test"
+    },
+    {
+      "path": "implementation/firmware/main/Kconfig.projbuild",
+      "line": 825,
+      "category": "private_ip",
+      "disposition": "verified upstream example or removed baseline sample; not private network data"
+    },
+    {
+      "path": "implementation/tests/test_release_identity.py",
+      "line": 40,
+      "category": "url_userinfo",
+      "disposition": "synthetic rejected credential-bearing URL in security regression test"
+    },
+    {
+      "path": "implementation/tests/test_release_identity.py",
+      "line": 40,
+      "category": "email",
+      "disposition": "synthetic rejected credential-bearing URL in security regression test"
+    },
+    {
+      "path": "tests/test_preparation.py",
+      "line": 28,
+      "category": "url_userinfo",
+      "disposition": "synthetic rejected credential-bearing URL in security regression test"
+    },
+    {
+      "path": "tests/test_preparation.py",
+      "line": 28,
+      "category": "email",
+      "disposition": "synthetic rejected credential-bearing URL in security regression test"
+    }
+  ],
+  "unresolved_findings": 0,
+  "symlinks": [],
+  "allowed_dotfiles": [
+    ".gitattributes",
+    ".gitignore"
+  ],
+  "broken_relative_markdown_links": [],
+  "python_syntax_files": 29,
+  "json_parsed_before_generated_manifest": 12,
+  "agpl_similarity_screen": {
+    "method": "six consecutive normalized nontrivial lines, minimum 180 characters; not proof of independent authorship",
+    "reference_windows": 124,
+    "matches": []
+  },
+  "secret_values_disclosed": false,
+  "caveat": "Pattern and finite similarity checks do not prove absence of every secret or derived work."
+}

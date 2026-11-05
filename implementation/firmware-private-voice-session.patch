@@ -1,0 +1,74 @@
+--- a/main/protocols/websocket_protocol.cc
++++ b/main/protocols/websocket_protocol.cc
+@@ -1,3 +1,8 @@
++#include <sdkconfig.h>
++#ifdef CONFIG_STACKCHAN_PRIVATE_BACKEND
++#include <hal/utils/private_pairing/private_pairing.h>
++#include <hal/utils/secret_logic/secret_logic.h>
++#endif
+ #include "websocket_protocol.h"
+ #include "board.h"
+ #include "system_info.h"
+@@ -81,6 +86,14 @@
+ }
+ 
+ bool WebsocketProtocol::OpenAudioChannel() {
++#ifdef CONFIG_STACKCHAN_PRIVATE_BACKEND
++    std::string token = private_pairing::authorization();
++    std::string url = secret_logic::get_server_url();
++    if (token.empty() || url.rfind("https://", 0) != 0) return false;
++    url.replace(0, 8, "wss://");
++    url += "/xiaozhi/v1/";
++    version_ = 1;
++#else
+     Settings settings("websocket", false);
+     std::string url = settings.GetString("url");
+     std::string token = settings.GetString("token");
+@@ -89,6 +102,7 @@
+         version_ = version;
+     }
+ 
++#endif
+     error_occurred_ = false;
+ 
+     auto network = Board::GetInstance().GetNetwork();
+--- a/main/protocols/mqtt_protocol.cc
++++ b/main/protocols/mqtt_protocol.cc
+@@ -1,3 +1,4 @@
++#include <sdkconfig.h>
+ #include "mqtt_protocol.h"
+ #include "board.h"
+ #include "application.h"
+@@ -57,6 +58,10 @@
+ }
+ 
+ bool MqttProtocol::StartMqttClient(bool report_error) {
++#ifdef CONFIG_STACKCHAN_PRIVATE_BACKEND
++    // Private backend has no MQTT transport; do not read/use legacy NVS identity.
++    return false;
++#endif
+     if (mqtt_ != nullptr) {
+         ESP_LOGW(TAG, "Mqtt client already started");
+         mqtt_.reset();
+--- a/main/application.cc
++++ b/main/application.cc
+@@ -482,6 +482,10 @@
+ 
+     display->SetStatus(Lang::Strings::LOADING_PROTOCOL);
+ 
++#ifdef CONFIG_STACKCHAN_PRIVATE_BACKEND
++    // Never fall back to MQTT credentials persisted by vendor firmware.
++    protocol_ = std::make_unique<WebsocketProtocol>();
++#else
+     if (ota_->HasMqttConfig()) {
+         protocol_ = std::make_unique<MqttProtocol>();
+     } else if (ota_->HasWebsocketConfig()) {
+@@ -490,6 +494,8 @@
+         ESP_LOGW(TAG, "No protocol specified in the OTA config, using MQTT");
+         protocol_ = std::make_unique<MqttProtocol>();
+     }
++
++#endif
+ 
+     protocol_->OnConnected([this]() {
+         DismissAlert();

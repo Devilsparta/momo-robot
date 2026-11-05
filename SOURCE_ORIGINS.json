@@ -1,0 +1,482 @@
+{
+  "note": "Existing upstream files and patch context retain upstream ownership; new project files are MIT. This mapping is not a complete dependency SBOM.",
+  "files": [
+    {
+      "path": "implementation/app/lib/app_state.dart",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "9e2dcb67834f0143dc1fd36099f0d50210dda03687eb8285d6fac8f7749a90ba"
+    },
+    {
+      "path": "implementation/app/lib/network/http.dart",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "621e8074b33f60f2ce7b94192a3d36a5195e39a5a124ff25607eb99b7106d2db"
+    },
+    {
+      "path": "implementation/app/lib/network/local_area_network_service.dart",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "8b7c38429388d4fe84838aa3a9d99b738f0d498cfbccdeb9dd1f51e5da7a06e2"
+    },
+    {
+      "path": "implementation/app/lib/network/private_control_policy.dart",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/app/lib/network/private_endpoints.dart",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/app/lib/network/private_pairing.dart",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/app/lib/network/private_session.dart",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/app/lib/network/urls.dart",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "b041cd6d927a1067fbcab70a69806f10b8b598cfed11d158e3dff8a0bc2c7ca7"
+    },
+    {
+      "path": "implementation/app/lib/network/web_socket_util.dart",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "466ef0bc0317806b652d1520af69adb7ba99324437c7ba02484c5d018090378e"
+    },
+    {
+      "path": "implementation/app/lib/util/audio_engine_manager.dart",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "22762bc20ab82674eff771867742ec9b1097e96dba669b050588f3c09a56f14b"
+    },
+    {
+      "path": "implementation/app/lib/util/xiao_zhi_util.dart",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "881d251d5cf14e68dc5e3685066ecee0c9459ea53cd015e8a3820ed8090a3b1c"
+    },
+    {
+      "path": "implementation/app/lib/util/XiaoZhi_util.dart",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "b520ca50125d894ef29b0eedf048547aabbca5f6fb2ee1ca7ce770cebb00c24f"
+    },
+    {
+      "path": "implementation/app/lib/view/home/home.dart",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "3c5b268d1f877cf663d66f5cb6279a0558663c87194dc9212ada85812c3ea4eb"
+    },
+    {
+      "path": "implementation/app/lib/view/popup/device_name_page.dart",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "f0081609dba2b42addeffdb952dacd5ef358612e5b5dab51e536e9a9e9fc151f"
+    },
+    {
+      "path": "implementation/app/lib/view/popup/device_wifi_config.dart",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "2b7c1e226f57f03a1e807df468b86cf638b1cfe87604bf18a33cf3f475b5abcd"
+    },
+    {
+      "path": "implementation/app/lib/view/popup/edit_agent.dart",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "dc1c83b5b11d9830a6ef07faea01af80c51007522a99daeebd2037435e0e729a"
+    },
+    {
+      "path": "implementation/app/lib/view/popup/private_connection_banner.dart",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/app/lib/view/popup/private_pairing_dialog.dart",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/app/lib/view/popup/select_blue_device.dart",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "95cfdb49abbacac6c93e7b1f2cdf03938fffda7a82d8887431afca439a160ef8"
+    },
+    {
+      "path": "implementation/app/lib/view/popup/xiaozhi_welcome_page.dart",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "d33d9ad481132d1a5787ffbc20e67c879391fc8819dce6fc7a7e8e8fdf8e46bc"
+    },
+    {
+      "path": "implementation/app/lib/view/util/stack_chan_face_view.dart",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "a52946c7bd3b59274fc0ccd939451250e9ef89f46bc7d62f342de1ed665ea954"
+    },
+    {
+      "path": "implementation/app/pubspec.lock",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/app/pubspec.yaml",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "7ff0f63a95b54d3852824e8507b570d17f68845f7ea1796f861946eb79ba19e8"
+    },
+    {
+      "path": "implementation/app/test/private_control_policy_test.dart",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/app/test/private_endpoints_test.dart",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/app/test/private_pairing_dialog_test.dart",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/app/test/private_pairing_test.dart",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/app/test/private_session_test.dart",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/app-private-endpoints.patch",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/backend/__init__.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/backend/access.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/backend/async_voice.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/backend/control.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/backend/control_hub.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/backend/dance.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/backend/device_store.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/backend/identity.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/backend/memory.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/backend/opus.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/backend/ota.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/backend/pairing.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/backend/pcm_voice.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/backend/service.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/backend/tool_policy.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/backend/transport.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/backend/vad.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/backend/voice.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/firmware/dependencies.lock",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "403a9f58f18ba6e2d2cfbfdbf2c6a23ec5ab3ba8e10f3bbdc806f677e2518016"
+    },
+    {
+      "path": "implementation/firmware/main/apps/app_dance/app_dance.cpp",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "08141856e5d3c00313da0de5fa0ed94ba0dcab0a8851d452ec6175371538f0a9"
+    },
+    {
+      "path": "implementation/firmware/main/apps/app_setup/app_setup.cpp",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "5908f8d81a165b8a35f78be607ba0f9a0fa867d115d381644c0d9b49c9dabadb"
+    },
+    {
+      "path": "implementation/firmware/main/apps/app_setup/workers/connectivity.cpp",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "162e7ae9a25829ed60264ae0f4815a97ac35ae126800b42722661f506b11eca0"
+    },
+    {
+      "path": "implementation/firmware/main/apps/app_setup/workers/private_pairing.cpp",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/firmware/main/apps/app_setup/workers/workers.h",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "366369da069f6bf234b3434fde80fcdd9368af2326e361218d2cff4937baf259"
+    },
+    {
+      "path": "implementation/firmware/main/hal/audio.cpp",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "330e847d12823292640cec533338eb16ae39c81d40579a2947e5b540c0d66cb3"
+    },
+    {
+      "path": "implementation/firmware/main/hal/board/cores3_audio_codec.cc",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "8aa25ffc65a2a5a9c95ce8bb86d69f665f4cdb00ce2c5981ab379ade584e9b85"
+    },
+    {
+      "path": "implementation/firmware/main/hal/board/hal_bridge.cc",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "288232549918410bed77d3571a36455b20f9cfe90f2a187caab3cb2db9559d0d"
+    },
+    {
+      "path": "implementation/firmware/main/hal/hal.cpp",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "3bd167cdb0c6ee166d9752fbc4785c4d90e86fa43be0d400e331040416ec76c3"
+    },
+    {
+      "path": "implementation/firmware/main/hal/hal_app_setup.cpp",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "b6cad4e17997261b15977297e46c9722cee3267360d6d55c3133c15d103f042d"
+    },
+    {
+      "path": "implementation/firmware/main/hal/hal_ble.cpp",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "808cb345accbc1555d8686960c6e82c11631ff618a776abe74d454bfc4db4aec"
+    },
+    {
+      "path": "implementation/firmware/main/hal/hal_ws_avatar.cpp",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "2d688fce3107655640b6b6e626bdfd169818ad4a675d1c1a69558a4e5b0e018a"
+    },
+    {
+      "path": "implementation/firmware/main/hal/utils/network_diagnostics/network_diagnostics.cpp",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "b2bd3299c432eee56e0557ab81d8785da32db2f47df1f52edc76ce6682d14ecd"
+    },
+    {
+      "path": "implementation/firmware/main/hal/utils/private_audio/audio_owner.h",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/firmware/main/hal/utils/private_audio/audio_policy.h",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/firmware/main/hal/utils/private_audio/avatar_audio.cpp",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/firmware/main/hal/utils/private_audio/avatar_audio.h",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/firmware/main/hal/utils/private_ota/private_ota.cpp",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/firmware/main/hal/utils/private_ota/private_ota.h",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/firmware/main/hal/utils/private_ota/update_state.h",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/firmware/main/hal/utils/private_pairing/private_pairing.cpp",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/firmware/main/hal/utils/private_pairing/private_pairing.h",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/firmware/main/hal/utils/secret_logic/secret_logic.cpp",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "6240ebb6550a229f76e577ac53052d57930b49767af22f1c25aeadc1925b32d9"
+    },
+    {
+      "path": "implementation/firmware/main/main.cpp",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "5872ef299fa6e4151678b9739e02fcf18032aff3456556644b8f12b6103d8953"
+    },
+    {
+      "path": "implementation/firmware-private-mode.patch",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/firmware-private-ota-precedence.patch",
+      "origin": "78/xiaozhi-esp32 + Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/firmware-private-pairing.patch",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/firmware-private-voice-session.patch",
+      "origin": "78/xiaozhi-esp32 + Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/server/internal/web_socket/frame_bounds_test.go",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/server/internal/web_socket/frame_codec.go",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/server/internal/web_socket/web_socket.go",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)",
+      "upstream_sha256": "5225099cc8779892693668d5b3c1c0d8785aff8828bb1a343a8bd211fe739680"
+    },
+    {
+      "path": "implementation/server-frame-bounds.patch",
+      "origin": "m5stack/StackChan + Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/tests/native_state_checks.cpp",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/tests/test_backend.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/tests/test_ota_delivery.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/tests/test_pcm_voice.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/tests/test_release_identity.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/tests/test_service.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/tools/run_checks.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/tools/run_native_policy_checks.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    },
+    {
+      "path": "implementation/tools/run_voice_checks.py",
+      "origin": "Momo",
+      "license": "MIT (upstream notices retained where applicable)"
+    }
+  ]
+}

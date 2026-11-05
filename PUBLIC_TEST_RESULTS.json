@@ -1,0 +1,103 @@
+{
+  "scope": "Fresh checks of this source candidate; no hardware, provider, signing, deployment or full SDK build",
+  "checks": [
+    {
+      "name": "python_full_with_opus",
+      "exit_code": 124,
+      "tests": null,
+      "skipped": 0,
+      "seconds": 45.17
+    },
+    {
+      "name": "preparation_config",
+      "exit_code": 0,
+      "tests": 7,
+      "skipped": 0,
+      "seconds": 0.31
+    },
+    {
+      "name": "native_policy",
+      "exit_code": 1,
+      "tests": null,
+      "skipped": 0,
+      "seconds": 0.28
+    },
+    {
+      "name": "independent_group_initial",
+      "status": "timeout",
+      "seconds": 45,
+      "note": "local result collector also failed to normalize timeout output; no pass claimed"
+    },
+    {
+      "name": "core_without_sockets",
+      "exit_code": 0,
+      "tests": 29,
+      "skipped": 0,
+      "completed_ok": 29,
+      "seconds": 0.58
+    },
+    {
+      "name": "native_codec_only",
+      "exit_code": 0,
+      "tests": 2,
+      "skipped": 0,
+      "completed_ok": 2,
+      "seconds": 0.95
+    },
+    {
+      "name": "streaming_without_transport",
+      "status": "timeout",
+      "tests": null,
+      "skipped": 0,
+      "completed_ok": 0,
+      "seconds": 20.03
+    }
+  ],
+  "patches": [
+    {
+      "patch": "app-private-endpoints.patch",
+      "check_exit": 0,
+      "apply_exit": 0
+    },
+    {
+      "patch": "server-frame-bounds.patch",
+      "check_exit": 0,
+      "apply_exit": 0
+    },
+    {
+      "patch": "firmware-private-mode.patch",
+      "check_exit": 0,
+      "apply_exit": 0
+    },
+    {
+      "patch": "firmware-private-pairing.patch",
+      "check_exit": 0,
+      "apply_exit": 0
+    },
+    {
+      "patch": "upstream-dependency.patch",
+      "check_exit": 0,
+      "apply_exit": 0
+    },
+    {
+      "patch": "firmware-private-ota-precedence.patch",
+      "check_exit": 0,
+      "apply_exit": 0
+    },
+    {
+      "patch": "firmware-private-voice-session.patch",
+      "check_exit": 0,
+      "apply_exit": 0
+    }
+  ],
+  "overlay_files_matched": 55,
+  "historical_results_are_not_fresh_checks": true,
+  "unrun": [
+    "full firmware rebuild",
+    "full Flutter App analyze/native/iOS build",
+    "Go rebuild",
+    "hardware/flash/OTA power-loss validation"
+  ],
+  "native_compiler_failure": "Windows CreateProcess WinError 623 (invalid system DLL relocation); no OS repair attempted",
+  "full_python_failure": "45-second runner deadline at first HTTP release download test; no complete regression pass claimed"
+}

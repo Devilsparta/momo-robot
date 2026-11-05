@@ -1,0 +1,149 @@
+{
+  "sources": [
+    {
+      "repo": "Forairaaaaa/mooncake",
+      "commit": "572a7e488641f1c3f22e85d65c27f095ecf27d12",
+      "archive_sha256": "d1502073331b00dce93110aa11ef5289b1b3b9ff132d53c64c5865ffe6aed06a"
+    },
+    {
+      "repo": "Forairaaaaa/mooncake_log",
+      "commit": "554d55cd8c6e551b911b99cad274a46929f05bae",
+      "archive_sha256": "57d4f612f6c658f7cde2c5f948c3280f04a8c499b5a37312777f8c2ffe6b58d0"
+    },
+    {
+      "repo": "Forairaaaaa/smooth_ui_toolkit",
+      "commit": "2a18ff5d3fd6b402339d0f4f3c2834f574e3cb05",
+      "archive_sha256": "223536f872e238fdec48141f27831efff3ad0b80002555805237445ebac04f31"
+    },
+    {
+      "repo": "bblanchon/ArduinoJson",
+      "commit": "733bc4ee82630c88c0a619a883cd3a206efae977",
+      "archive_sha256": "8eca0cb41b3cb92f4de122ce7aa70950e3e16ff983cd7266abaa8c3a6c6210ea"
+    },
+    {
+      "repo": "espressif/esp32-bt-lib",
+      "commit": "a348e3fbc75411acd88357af9e1d6a76621c449e",
+      "archive_sha256": "c9e61c09f69470e25cceaa8e411707d406fb848257d5cb9cdb64713d7e8fe5a4"
+    },
+    {
+      "repo": "78/xiaozhi-esp32",
+      "commit": "e77dedb1309153bb63fed285772962c920c97dd4",
+      "archive_sha256": "1d91cfc1f4a09338136565181909607841144394267eaf578628b519aebefa62"
+    },
+    {
+      "repo": "pellepl/spiffs",
+      "commit": "0dbb3f71c5f6fae3747a9d935372773762baf852",
+      "archive_sha256": "d6d08182da35d244e3c0724c4a892124fac93738a59ecc108621d96319af4790"
+    },
+    {
+      "repo": "kmackay/micro-ecc",
+      "commit": "24c60e243580c7868f4334a1ba3123481fe1aa48",
+      "archive_sha256": "5c7883ae2c1f8c124442a2b859ad883ba46240ad23eb474586a5038ea80c23e1"
+    },
+    {
+      "repo": "DaveGamble/cJSON",
+      "commit": "c859b25da02955fef659d658b8f324b5cde87be3",
+      "archive_sha256": "920293c229e7f828e5c5ca27c90804f654b72ccf7bf61ca7331600559366e2de"
+    },
+    {
+      "repo": "espressif/mbedtls",
+      "commit": "ffb280bb63c78bfec1e1ab55040671768c85c923",
+      "archive_sha256": "d4b794c9cf8a6c47fb0a8dfb9322e8d2995b6b664f1ae5ff113b7b45b4cae2bf"
+    },
+    {
+      "repo": "espressif/esp-now",
+      "commit": "c33383de97f3ed2fc52117f5ef04f71990432e5d",
+      "archive_sha256": "6e06f9804f0ba2f9c4825d8e3501a785c8f09aa1ee4c75a27e995240edcf84a4"
+    },
+    {
+      "repo": "espressif/esp-mqtt",
+      "commit": "6af4446a48ea7fa54948edc4e62277ed70abb6e1",
+      "archive_sha256": "6238ff61847b612a2e862920f20df40c54dc0d4bb181e93acc56f480273768fb"
+    },
+    {
+      "repo": "protobuf-c/protobuf-c",
+      "commit": "abc67a11c6db271bedbb9f58be85d6f4e2ea8389",
+      "archive_sha256": "1b024383e6f3082e69a16ae4a45e5c900e618729476e6d8e67284beef3298be2"
+    },
+    {
+      "repo": "espressif/esp-lwip",
+      "commit": "fd432e4ee2cfb7f7f1c7eb7227e0173412e7b84e",
+      "archive_sha256": "6a1cb6d2f829134ecc413ad392077aecdc1b4f220d66c98b4b2bd8fe850791a4"
+    },
+    {
+      "repo": "ThrowTheSwitch/Unity",
+      "commit": "bf560290f6020737eafaa8b5cbd2177c3956c03f",
+      "archive_sha256": "57fca310570e8a9a4ad65a8feb41135c7ad3a66aac302f89fc42396bfdf63950"
+    },
+    {
+      "repo": "ThrowTheSwitch/CMock",
+      "commit": "eeecc49ce8af123cf8ad40efdb9673e37b56230f",
+      "archive_sha256": "3465925b0d1c4c490cc94a7b36e24354f4302c1bdebeebd6e637987087a9c4fc"
+    },
+    {
+      "repo": "espressif/esp-nimble",
+      "commit": "5c1a43ca3d205c3d5183e57dedce335fb6a81155",
+      "archive_sha256": "2127719b476b0d3c9c14ac6ff6e03f20f001659edc8c85ab355f880c99b628b9"
+    },
+    {
+      "repo": "espressif/esp32-wifi-lib",
+      "commit": "b87cce81803b85c3639fb14bac6c24cff6d0fbad",
+      "archive_sha256": "28c86bfa59d8e37db6b8e1736fae3666a404ed6dcb8bdb998d7c26214c7c0bc2"
+    },
+    {
+      "repo": "espressif/esp32c3-bt-lib",
+      "commit": "ebd6043a8e3c3bbde45ee483895303b9c1229ab5",
+      "archive_sha256": "3303646782084dc4cd2813521b15310c4ffabbea9c00001e8945a0d257b8a59e"
+    },
+    {
+      "repo": "espressif/esp-phy-lib",
+      "commit": "3d57415af6e4c92eff2c4c3463e20a51d7340aba",
+      "archive_sha256": "7c08c9a1e63508fed2702470b6f428c7f7c834ec0cf54252d2da316ebb422eec"
+    },
+    {
+      "repo": "espressif/esp-thread-lib",
+      "commit": "2e2d91a382ad6387ce77551c6adbb1514db12472",
+      "archive_sha256": "aade5adb8623354c7815313a6ea67b23558ccc1fe6761a1e8150299d4e164f04"
+    },
+    {
+      "repo": "espressif/openthread",
+      "commit": "a12ff0d0f54fd41954b45047fcdd08f302731c5f",
+      "archive_sha256": "b663f88e5a52aafe1026b937c831a9c7af6c89b9248dde4866ffc3ae700f3fa4"
+    },
+    {
+      "repo": "espressif/esp32c2-bt-lib",
+      "commit": "1b0f5aac0fcf91ea042c781e6da10a528ca0da03",
+      "archive_sha256": "d9624570e72f899ce206ad527076d619800d87cf60b09c22b4c21d85342884dd"
+    },
+    {
+      "repo": "espressif/esp32c6-bt-lib",
+      "commit": "9d05fc931ae771de52de7e4b4c7090f5b3ec0ec4",
+      "archive_sha256": "d0f727abe026b2f4be3c9fdbe33209eb211966b4ff6aa5ba597fad07990bf2e3"
+    },
+    {
+      "repo": "espressif/tlsf",
+      "commit": "2867f6883a12920b1969ff9624c0ab0e4185c2ce",
+      "archive_sha256": "48f7b6848ca2430b0fa73fef33795bca78f42f016d196a4d10be369a08a82e9e"
+    },
+    {
+      "repo": "espressif/esp32h2-bt-lib",
+      "commit": "126dbfeec7e7291458ce6ff8f9297e46f8946733",
+      "archive_sha256": "005a45c6486eb0265f1d57a4b4e56725b19b0f4d3ab6e6e3fb13cc5c9167adaf"
+    },
+    {
+      "repo": "espressif/esp32c5-bt-lib",
+      "commit": "1a570a59b6d694b8829c82555f445d88bf26f295",
+      "archive_sha256": "6aba415b49094d46a9d78fe4ba74fe100944a0f23b6d855a69a574b0dfcc85d3"
+    },
+    {
+      "repo": "espressif/esp-coex-lib",
+      "commit": "ee5cd79583c02f23e43e62931ffb55f5a4992d0f",
+      "archive_sha256": "8b52f7d6f0b72f13c25f05a646b96919b13a159de9011a8b2a494792e22c6562"
+    },
+    {
+      "repo": "espressif/esp-ble-mesh-lib",
+      "commit": "e44762384ed104a0ebc78f134eeba5f3ab648ddc",
+      "archive_sha256": "e259a42e080a5a601a6b6874eb13777deba70e74ddfb350ce2ade643baf57764"
+    }
+  ]
+}

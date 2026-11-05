@@ -1,0 +1,62 @@
+{
+  "whole_trees": [
+    "worktrees/",
+    "sources/",
+    "archives/",
+    "implementation/artifacts/",
+    "implementation/evidence/",
+    "SDK and dependency cache directories"
+  ],
+  "private_documents": [
+    "PROJECT_HANDOFF.md",
+    "implementation/RESOURCE_DIAGNOSIS.md",
+    "implementation/EXTRA_TOOLCHAIN_REQUEST.md",
+    "implementation/IMPLEMENTATION_PROGRESS.md",
+    "implementation/FINAL_REVIEW.md",
+    "implementation/DEPENDENCY_REVIEW.md"
+  ],
+  "replaced_documents": [
+    "README.md",
+    "implementation/README.md",
+    "implementation/STATUS.md",
+    "implementation/BUILD_AND_RECOVERY.md",
+    "implementation/TOOLCHAINS.md"
+  ],
+  "obsolete_or_environment_coupled_tools": [
+    "tools/build_firmware.ps1",
+    "tools/sync_firmware.py",
+    "tools/prepare_flutter.ps1",
+    "tools/fetch_build_sources.py",
+    "tools/export_build_artifacts.py",
+    "tools/make_review_patches.py",
+    "tools/package_review_bundle.py"
+  ],
+  "other_excluded": [
+    "all original ZIPs and raw logs",
+    "implementation/DELIVERABLES.json",
+    "implementation/provenance/storage-footprint.json",
+    "docs/implementation.md",
+    "docs/source-audit.md",
+    "docs/contracts.md",
+    "original source snapshot test class SourceContractTests",
+    "legacy upload preparation directory and ZIP",
+    "credentials, local configuration, device identity stores, certificates, recordings, media assets, firmware and application binaries"
+  ],
+  "license_exclusions": [
+    "AGPL reference implementation snapshot",
+    "all unreviewed reference implementations",
+    "App assets/fonts/models/music/third-party implementation bundles",
+    "SDK/component/native libraries and FFmpeg binaries"
+  ],
+  "candidate_changes": [
+    "MIT for original Momo contributions; independent upstream notices",
+    "neutral project-facing documentation replacing private handoff/history",
+    "runners use explicit tool environment variables",
+    "preparation SKU label normalized to K151; only standalone config tests retained",
+    "provenance machine-directory fields removed",
+    "complete file hashes and public review records added"
+  ],
+  "retained_synthetic_material": "Test proofs, test identities, adversarial URLs, hashes and protocol constants are intentionally retained as non-production fixtures. They are not deployed credentials.",
+  "known_baseline_examples": "Three RFC1918 address occurrences remain: two removed upstream App sample lines in an applicable patch and one upstream Kconfig example. They are verified upstream bytes, not a private device/network configuration.",
+  "unresolved_license_source_files_included": []
+}

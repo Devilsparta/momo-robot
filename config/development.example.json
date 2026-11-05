@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "mode": "offline-preparation",
+  "hardware": {
+    "sku": "K151",
+    "firmware_version": "UNKNOWN"
+  },
+  "endpoints": {
+    "management_base": "https://management.example.invalid",
+    "voice_ota": "https://voice.example.invalid/xiaozhi/ota/",
+    "voice_ws": "wss://voice.example.invalid/xiaozhi/v1/"
+  },
+  "identity": {
+    "strategy": "TBD",
+    "device_credential": "PLACEHOLDER_DEVICE_CREDENTIAL",
+    "user_credential": "PLACEHOLDER_USER_CREDENTIAL"
+  },
+  "providers": {
+    "enabled": false,
+    "name": "TBD",
+    "model": "TBD",
+    "credential": "PLACEHOLDER_PROVIDER_CREDENTIAL"
+  },
+  "data_policy": {
+    "audio_egress": false,
+    "transcript_egress": false,
+    "image_egress": false,
+    "memory_egress": false
+  },
+  "ota": {
+    "enabled": false,
+    "channel": "disabled",
+    "firmware_url": ""
+  },
+  "tools": {
+    "default_allow": false,
+    "allowlist": []
+  }
+}

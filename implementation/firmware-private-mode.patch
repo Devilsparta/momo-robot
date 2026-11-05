@@ -1,0 +1,15 @@
+--- a/firmware/main/Kconfig.projbuild
++++ b/firmware/main/Kconfig.projbuild
+@@ -1,4 +1,12 @@
+ menu "StackChan Server"
++
++config STACKCHAN_PRIVATE_BACKEND
++    bool "Use private backend endpoint policy"
++    default n
++    help
++        In private mode use CONFIG_OTA_URL instead of a legacy NVS URL.
++        This does not erase NVS or provision device credentials.
++
+ 
+ config STACKCHAN_SERVER_URL
+     string "StackChan server base URL"

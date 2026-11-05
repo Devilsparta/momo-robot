@@ -1,0 +1,7 @@
+# Placeholder only. Do not copy to a live device/build without the later review.
+# Existing upstream firmware/CMakeLists.txt loads sdkconfig.defaults.local.
+CONFIG_STACKCHAN_SERVER_URL="https://management.example.invalid"
+CONFIG_OTA_URL="https://voice.example.invalid/xiaozhi/ota/"
+# NVS wifi/ota_url can override CONFIG_OTA_URL. Do not erase or inject NVS.
+# Existing sdkconfig may retain old values; use a fresh, later-authorized build directory.
+

@@ -1,0 +1,111 @@
+--- a/main/ota.cc
++++ b/main/ota.cc
+@@ -1,3 +1,9 @@
++#include <sdkconfig.h>
++#ifdef CONFIG_STACKCHAN_PRIVATE_BACKEND
++#include <hal/utils/private_pairing/private_pairing.h>
++#include <hal/utils/private_ota/private_ota.h>
++#include <hal/utils/secret_logic/secret_logic.h>
++#endif
+ #include "ota.h"
+ #include "system_info.h"
+ #include "settings.h"
+@@ -44,12 +50,17 @@
+ }
+ 
+ std::string Ota::GetCheckVersionUrl() {
++#ifdef CONFIG_STACKCHAN_PRIVATE_BACKEND
++    // Preserve legacy NVS for rollback; private builds must not contact its URL.
++    return secret_logic::get_server_url()+"/xiaozhi/ota/";
++#else
+     Settings settings("wifi", false);
+     std::string url = settings.GetString("ota_url");
+     if (url.empty()) {
+         url = CONFIG_OTA_URL;
+     }
+     return url;
++#endif
+ }
+ 
+ std::unique_ptr<Http> Ota::SetupHttp() {
+@@ -57,6 +68,9 @@
+     auto network = board.GetNetwork();
+     auto http = network->CreateHttp(0);
+     auto user_agent = SystemInfo::GetUserAgent();
++#ifdef CONFIG_STACKCHAN_PRIVATE_BACKEND
++    http->SetHeader("Authorization", private_pairing::authorization());
++#else
+     http->SetHeader("Activation-Version", has_serial_number_ ? "2" : "1");
+     http->SetHeader("Device-Id", SystemInfo::GetMacAddress().c_str());
+     http->SetHeader("Client-Id", board.GetUuid());
+@@ -64,6 +78,10 @@
+         http->SetHeader("Serial-Number", serial_number_.c_str());
+         ESP_LOGI(TAG, "Setup HTTP, User-Agent: %s, Serial-Number: %s", user_agent.c_str(), serial_number_.c_str());
+     }
++#endif
++#ifdef CONFIG_STACKCHAN_PRIVATE_BACKEND
++    http->SetHeader("Device-Id", SystemInfo::GetMacAddress().c_str());
++#endif
+     http->SetHeader("User-Agent", user_agent);
+     http->SetHeader("Accept-Language", Lang::CODE);
+     http->SetHeader("Content-Type", "application/json");
+@@ -88,6 +106,10 @@
+         return ESP_ERR_INVALID_ARG;
+     }
+ 
++#ifdef CONFIG_STACKCHAN_PRIVATE_BACKEND
++    if (private_pairing::authorization().empty() || url.rfind("https://", 0) != 0)
++        return ESP_ERR_INVALID_STATE;
++#endif
+     auto http = SetupHttp();
+ 
+     std::string data = board.GetSystemInfoJson();
+@@ -119,6 +141,27 @@
+         return ESP_ERR_INVALID_RESPONSE;
+     }
+ 
++#ifdef CONFIG_STACKCHAN_PRIVATE_BACKEND
++    // Only a configured verifier may offer a private release. Never persist token/MQTT settings,
++    // run vendor activation, or trust an unsigned upgrade URL from a response.
++    requires_app_binding_ = has_activation_challenge_ = has_mqtt_config_ = false;
++    has_new_version_ = false;
++    auto* private_ws = cJSON_GetObjectItemCaseSensitive(root, "websocket");
++    auto* private_version = cJSON_GetObjectItemCaseSensitive(private_ws, "version");
++    has_websocket_config_ = cJSON_IsNumber(private_version) && private_version->valueint == 1;
++    auto* release = cJSON_GetObjectItemCaseSensitive(root, "private_release");
++    auto* manifest = cJSON_GetObjectItemCaseSensitive(release, "manifest");
++    auto* signature = cJSON_GetObjectItemCaseSensitive(release, "signature");
++    if (cJSON_IsObject(manifest) && cJSON_IsString(signature)) {
++        char* raw = cJSON_PrintUnformatted(manifest);
++        if (raw) {
++            has_new_version_ = private_ota::offer(raw,signature->valuestring,firmware_url_,firmware_version_);
++            cJSON_free(raw);
++        }
++    }
++    cJSON_Delete(root);
++    return has_websocket_config_ ? ESP_OK : ESP_ERR_INVALID_RESPONSE;
++#endif
+     requires_app_binding_ = false;
+     has_activation_challenge_ = false;
+     cJSON *activation = cJSON_GetObjectItem(root, "activation");
+@@ -239,6 +282,10 @@
+ }
+ 
+ void Ota::MarkCurrentVersionValid() {
++#ifdef CONFIG_STACKCHAN_PRIVATE_BACKEND
++    private_ota::reconcile_boot();
++    return;
++#endif
+     auto partition = esp_ota_get_running_partition();
+     if (strcmp(partition->label, "factory") == 0) {
+         ESP_LOGI(TAG, "Running from factory partition, skipping");
+@@ -259,6 +306,9 @@
+ }
+ 
+ bool Ota::Upgrade(const std::string& firmware_url, std::function<void(int progress, size_t speed)> callback) {
++#ifdef CONFIG_STACKCHAN_PRIVATE_BACKEND
++    return private_ota::install(firmware_url,callback);
++#endif
+     ESP_LOGI(TAG, "Upgrading firmware from %s", firmware_url.c_str());
+     esp_ota_handle_t update_handle = 0;
+     auto update_partition = esp_ota_get_next_update_partition(NULL);
